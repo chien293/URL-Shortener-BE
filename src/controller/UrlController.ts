@@ -11,7 +11,7 @@ class UrlController {
   //private urlService: UrlService;
 
   async generateShortUrl(req: Request, res: Response): Promise<void> {
-    const urlRequest : UrlAttributes = req.query as any;
+    const urlRequest : UrlAttributes = req.body as any;
 
     if (!urlRequest.long_url) {
       throw new BadRequestError("Long URL is required");
