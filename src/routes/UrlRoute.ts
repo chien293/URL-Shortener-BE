@@ -6,3 +6,7 @@ export const router = Router();
 const urlController = new UrlController();
 
 router.post("/", asyncHandler(urlController.generateShortUrl));
+
+router.get("/:shortUrl", asyncHandler(urlController.findOriginalUrl));
+
+router.post("/:shortUrl", asyncHandler(urlController.verifyPassword));

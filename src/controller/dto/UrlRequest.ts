@@ -1,7 +1,8 @@
 interface UrlRequest {
-  longUrl: string;
+  long_url: string;
   password: string;
-  expiry_date: string;
+  expiry_date: Date;
+  custom_code: string;
 }
 
 export default UrlRequest;
