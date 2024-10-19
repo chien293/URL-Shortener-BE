@@ -9,7 +9,7 @@ const dbConfig = {
   PASSWORD: process.env.DB_PASSWORD,
   DATABASE: process.env.DB_DATABASE_NAME || "error",
   PORT: process.env.DB_PORT,
-  DIALECT: process.env.DB_DIALECT,
+  DIALECT: process.env.DB_DIALECT || "postgres",
 };
 
 const sequelize = new Sequelize(
