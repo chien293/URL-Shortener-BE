@@ -50,8 +50,7 @@ Url.init(
     },
     custom_code: {
       type: DataTypes.STRING(255),
-      allowNull: true,
-      unique: true,
+      allowNull: true, // Optional field
     },
   },
   {

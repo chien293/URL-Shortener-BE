@@ -13,6 +13,12 @@ export class HttpError extends Error {
       super(404, message);
     }
   }
+
+  export class ExpiredError extends HttpError {
+    constructor(message: string = "Expired Error") {
+      super(410, message);
+    }
+  }
   
   export class BadRequestError extends HttpError {
     constructor(message: string = "Bad Request Error") {
