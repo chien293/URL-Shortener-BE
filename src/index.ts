@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from 'dotenv';
 import { Url } from "./routes";
+import { errorHandler } from "./middleware/errorHandler";
 dotenv.config();
 
 const app = express();
@@ -19,6 +20,8 @@ app.use(
 );
 
 app.use("/api/v1/shorten-url", Url);
+
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Server is running at ${serverUrl}:${port}`);

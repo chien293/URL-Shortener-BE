@@ -35,6 +35,7 @@ class UrlService {
 
   generateShortUrlWithCustomCode(urlRequest: UrlRequest): string {
     const hashCode = this.generateHashedShortURL(urlRequest.long_url);
+    //throw new BadRequestError("Custom code already exists");
     return urlRequest.custom_code + "-" + hashCode;
   }
 
